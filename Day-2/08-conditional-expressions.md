@@ -5,7 +5,7 @@ Conditional expressions in Terraform are used to define conditional logic within
 The syntax for a conditional expression in Terraform is:
 
 ```hcl
-condition ? true_val : false_val
+**condition ? true_val : false_val**
 ```
 
 - `condition` is an expression that evaluates to either `true` or `false`.
@@ -56,7 +56,7 @@ resource "aws_security_group" "example" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = var.environment == "production" ? [var.production_subnet_cidr] : [var.development_subnet_cidr]
+  **  cidr_blocks = var.environment == "production" ? [var.production_subnet_cidr] : [var.development_subnet_cidr]**
   }
 }
 
