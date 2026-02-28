@@ -56,7 +56,7 @@ resource "aws_security_group" "example" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-  **  cidr_blocks = var.environment == "production" ? [var.production_subnet_cidr] : [var.development_subnet_cidr]**
+  cidr_blocks = var.environment == "production" ? [var.production_subnet_cidr] : [var.development_subnet_cidr]
   }
 }
 
